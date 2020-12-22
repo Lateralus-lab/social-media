@@ -4,23 +4,39 @@ import styled from 'styled-components';
 const Nav = () => {
   return (
     <NavStyled>
-      <ul>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>News</li>
-        <li>Music</li>
-        <li>Settings</li>
+      <ul className="list">
+        <li className="list_link">
+          <a href="/Profile">Profile</a>
+        </li>
+        <li className="list_link">
+          <a href="/Messages">Messages</a>
+        </li>
+        <li className="list_link">
+          <a href="/News">News</a>
+        </li>
+        <li className="list_link">
+          <a href="/Music">Music</a>
+        </li>
+        <li className="list_link">
+          <a href="/Settings">Settings</a>
+        </li>
       </ul>
     </NavStyled>
   );
 };
 
 const NavStyled = styled.div`
-  grid-area: n;
   margin: 0 auto;
-  max-width: 1320px;
-  width: 100%;
   background-color: burlywood;
+
+  .list {
+    text-align: center;
+
+    & > .list_link {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
 `;
 
 export default Nav;

@@ -5,21 +5,21 @@ const Header = () => {
   return (
     <HeaderStyled>
       <div className="logo">Logo</div>
-      <div className="header-user">
+      <div className="header_user">
         <ul>
           <li>Eli</li>
           <li>Home</li>
         </ul>
       </div>
-      <div className="header-options">
+      <div className="header_options">
         <ul>
           <li>Group</li>
           <li>Message</li>
           <li>Bell</li>
         </ul>
       </div>
-      <div className="header-lock">Lock</div>
-      <div className="header-search">
+      <div className="header_lock">Lock</div>
+      <div className="header_search">
         <ul>
           <li>search-icon</li>
           <li>
@@ -36,7 +36,7 @@ const HeaderStyled = styled.div`
   display: grid;
   grid-template-columns: 20% 10% 20% 20% 30%;
   grid-area: header;
-  padding: 0 50px;
+  padding: 25px 50px;
   background-color: #385998;
   color: #ffffff;
 
@@ -54,23 +54,23 @@ const HeaderStyled = styled.div`
     color: #ffffff;
   }
 
-  .header-user {
+  .header_user {
     display: flex;
     align-items: center;
   }
 
-  .header-options {
+  .header_options {
     display: flex;
     align-items: center;
     justify-self: center;
   }
 
-  .header-lock {
+  .header_lock {
     display: flex;
     align-items: center;
   }
 
-  .header-search {
+  .header_search {
     display: flex;
     align-items: center;
     justify-self: end;

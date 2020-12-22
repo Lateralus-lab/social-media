@@ -11,6 +11,7 @@ const Footer = () => {
 
 const FooterStyled = styled.div`
   grid-area: footer;
+  padding: 25px 50px;
   background-color: green;
 `;
 
