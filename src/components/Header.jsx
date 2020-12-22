@@ -35,7 +35,7 @@ const Header = () => {
 const HeaderStyled = styled.div`
   display: grid;
   grid-template-columns: 20% 10% 20% 20% 30%;
-  grid-area: h;
+  grid-area: header;
   padding: 0 50px;
   background-color: #385998;
   color: #ffffff;

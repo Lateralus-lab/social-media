@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import profile from '../images/profile.png';
 
-const Profile = () => {
+const Hero = () => {
   return (
-    <ProfileStyled>
+    <HeroStyled>
       <div className="user">
         <div className="user-img">
           <img src={profile} alt="profile" />
         </div>
         <div className="user-name">Eli Krizevski</div>
       </div>
-    </ProfileStyled>
+    </HeroStyled>
   );
 };
 
-const ProfileStyled = styled.div`
-  grid-area: c;
+const HeroStyled = styled.div`
+  grid-area: hero;
   margin: 0 auto;
   padding: 200px 15px 90px 15px;
   height: 500px;
@@ -31,4 +31,4 @@ const ProfileStyled = styled.div`
   }
 `;
 
-export default Profile;
+export default Hero;

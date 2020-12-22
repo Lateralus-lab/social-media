@@ -17,6 +17,9 @@ const Nav = () => {
 
 const NavStyled = styled.div`
   grid-area: n;
+  margin: 0 auto;
+  max-width: 1320px;
+  width: 100%;
   background-color: burlywood;
 `;
 
