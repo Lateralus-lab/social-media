@@ -8,7 +8,6 @@ const Main = () => {
   return (
     <MainStyled>
       <div className="container">
-        <h3>Main</h3>
         <Nav />
         <Feed />
       </div>

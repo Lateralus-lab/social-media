@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Route } from 'react-router-dom';
 // Import components
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -12,9 +13,9 @@ const App = () => {
   return (
     <WrapApp>
       <Header />
-      {/* <Hero /> */}
-      {/* <Main /> */}
-      <Messages />
+      <Hero />
+      <Route path="/Profile" component={Main} />
+      <Route path="/Messages" component={Messages} />
       <Sidebar />
       <Footer />
     </WrapApp>
@@ -23,8 +24,8 @@ const App = () => {
 
 const WrapApp = styled.div`
   display: grid;
-  grid-template-columns: 33.1% 33.1 33.1%;
-  grid-template-rows: auto 0fr 3fr auto;
+  // grid-template-columns: 100% 100% 40% 60%;
+  // grid-template-rows: auto 0fr 3fr auto;
   grid-template-areas: 'header header header' 'hero hero hero' 'sidebar main main' 'footer footer footer';
   // grid-gap: 10px;
   height: 100vh;

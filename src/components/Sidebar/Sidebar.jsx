@@ -8,7 +8,6 @@ import Friends from './Friends';
 const Sidebar = () => {
   return (
     <SidebarStyled>
-      <h3>Sidebar</h3>
       <About />
       <Photos />
       <Friends />
@@ -18,6 +17,8 @@ const Sidebar = () => {
 
 const SidebarStyled = styled.div`
   grid-area: sidebar;
+  width: 100%;
+  max-width: 970px;
   background-color: red;
 `;
 
