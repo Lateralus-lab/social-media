@@ -2,12 +2,12 @@ import React from 'react';
 import s from './Profile.module.css';
 // Import components
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = () => {
   return (
     <div>
-      <div className={s.hero_img}>Hero</div>
-      <div>Ava + desc</div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   );
