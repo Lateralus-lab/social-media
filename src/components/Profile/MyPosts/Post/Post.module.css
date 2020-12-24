@@ -1,0 +1,13 @@
+.item {
+  color: greenyellow;
+}
+
+.item img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.likes {
+  font-size: 12px;
+}
+

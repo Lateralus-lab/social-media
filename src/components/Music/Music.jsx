@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-// Import components
-import Nav from '../Nav';
+import s from './Music.module.css';
 
-const Settings = () => {
+const Music = () => {
   return (
-    <SettingsStyled>
-      <Nav />
-      <div>SettingsStyled</div>
-    </SettingsStyled>
+    <div>
+      <h3>Music</h3>
+    </div>
   );
 };
 
-const SettingsStyled = styled.div`
-  grid-area: main;
-`;
-
-export default Settings;
+export default Music;

@@ -1,35 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 // Import components
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Main from './components/Main/Main';
-import Messages from './components/Messages/Messages';
-import Sidebar from './components/Sidebar/Sidebar';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Navbar from './components/Nav/Navbar';
+import Profile from './components/Profile/Profile';
+import Dialogs from './components/Dialogs/Dialogs';
+import News from './components/News/News';
+import Music from './components/Music/Music';
+import Settings from './components/Settings/Settings';
 
 const App = () => {
   return (
-    <WrapApp>
-      <Header />
-      <Hero />
-      <Route path="/Profile" component={Main} />
-      <Route path="/Messages" component={Messages} />
-      <Sidebar />
-      <Footer />
-    </WrapApp>
+    <BrowserRouter>
+      <div className="app_wrapper">
+        <Header />
+        <Navbar />
+        <div className="app_content_wrapper">
+          <Route path="/profile" component={Profile} />
+          <Route path="/dialogs" component={Dialogs} />
+          <Route path="/news" component={News} />
+          <Route path="/music" component={Music} />
+          <Route path="/settings" component={Settings} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 };
-
-const WrapApp = styled.div`
-  display: grid;
-  // grid-template-columns: 100% 100% 40% 60%;
-  // grid-template-rows: auto 0fr 3fr auto;
-  grid-template-areas: 'header header header' 'hero hero hero' 'sidebar main main' 'footer footer footer';
-  // grid-gap: 10px;
-  height: 100vh;
-  // min-height: 100%;
-`;
 
 export default App;

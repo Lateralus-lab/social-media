@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-// Import components
-import Nav from '../Nav';
+import s from './News.module.css';
 
 const News = () => {
   return (
-    <NewsStyled>
-      <Nav />
-      <div>News</div>
-    </NewsStyled>
+    <div>
+      <h3>News</h3>
+    </div>
   );
 };
-
-const NewsStyled = styled.div`
-  grid-area: main;
-`;
 
 export default News;
