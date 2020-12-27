@@ -1,3 +1,7 @@
+import dialogsReducer from './dialogsReducer';
+import profileReducer from './profileReducer';
+import sidebarReducer from './sidebarReducer';
+
 let store = {
   _state: {
     profilePage: {
@@ -14,7 +18,6 @@ let store = {
         { id: 3, message: 'Awesome, dude!' },
         { id: 4, message: 'Yo!' },
         { id: 5, message: 'Yo!' },
-        { id: 6, message: 'Yo!' },
       ],
       dialogs: [
         { id: 1, name: 'Peter' },
@@ -22,17 +25,24 @@ let store = {
         { id: 3, name: 'Julia' },
         { id: 4, name: 'Helen' },
         { id: 5, name: 'Hayley' },
-        { id: 6, name: 'Jessica' },
       ],
+      newMessageBody: '',
     },
+    sidebar: {
+      name: '',
+    },
+  },
+
+  _callSubscriber() {
+    console.log('State is changed');
   },
 
   getState() {
     return this._state;
   },
 
-  _callSubscriber() {
-    console.log('State is changed');
+  subscribe(observer) {
+    this._callSubscriber = observer;
   },
 
   addPost() {
@@ -52,8 +62,12 @@ let store = {
     this._callSubscriber(this._state);
   },
 
-  subscribe(observer) {
-    this._callSubscriber = observer;
+  dispatch(action) {
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+
+    this._callSubscriber(this._state);
   },
 };
 

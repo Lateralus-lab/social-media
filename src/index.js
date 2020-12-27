@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import store from './redux/state';
+import store from './redux/store';
 import './App.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,8 +12,8 @@ let rerenderEntireThree = (state) => {
       <BrowserRouter>
         <App
           state={state}
-          addPost={store.addPost.bind(store)}
-          updateNewPostText={store.updateNewPostText.bind(store)}
+          dispatch={store.dispatch.bind(store)}
+          store={store}
         />
       </BrowserRouter>
     </React.StrictMode>,
