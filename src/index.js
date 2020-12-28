@@ -3,6 +3,7 @@ import App from './App';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/reduxStore';
+import { Provider } from 'react-redux';
 import './App.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,11 +11,13 @@ let rerenderEntireThree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
-        <App
-          state={state}
-          dispatch={store.dispatch.bind(store)}
-          store={store}
-        />
+        <Provider store={store}>
+          <App
+            state={state}
+            dispatch={store.dispatch.bind(store)}
+            store={store}
+          />
+        </Provider>
       </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
