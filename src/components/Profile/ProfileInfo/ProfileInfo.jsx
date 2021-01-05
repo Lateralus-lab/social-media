@@ -14,7 +14,10 @@ const ProfileInfo = (props) => {
       <div className={s.descBlock}>
         <img src={props.profile.photos.large} alt="photo" />
         <div>Ava + desc</div>
-        <ProfileStatus status={'Yo!'} />
+        <ProfileStatus
+          status={props.status}
+          updateStatus={props.updateStatus}
+        />
       </div>
     </div>
   );
