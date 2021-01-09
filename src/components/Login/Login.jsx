@@ -1,4 +1,5 @@
 import React from 'react';
+import s from '../common/FormControls/FormControls.module.css';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
@@ -30,6 +31,7 @@ const LoginForm = (props) => {
         <Field type="checkbox" name={'rememberMe'} component={Input} /> remember
         me
       </div>
+      {props.error && <div className={s.formSumaryError}>{props.error}</div>}
       <div>
         <button>Login</button>
       </div>
